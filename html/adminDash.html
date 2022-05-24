@@ -31,7 +31,7 @@
   
   <!-- Modal -->
   <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog  modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-scrollable  modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="staticBackdropLabel">Student Details</h5>
@@ -41,33 +41,43 @@
             <div class="container">
                 <div class="col">
                     <div class="row">
-                        <p>Name</p>
-                        <input type="text" style="width: 200px;border-radius: 20px;padding: 10px;">
+                        <p >Name</p>
+                        <input id="studentName" type="text" style="width: 200px;border-radius: 20px;padding: 10px;">
                     </div>
                     <div class="row">
                         <p>Adm No</p>
-                        <input type="text" style="width: 200px;border-radius: 20px;padding: 10px;">
+                        <input id="admNo" type="text" style="width: 200px;border-radius: 20px;padding: 10px;">
                     </div>
                     <div class="row">
-                        <p>Class</p>
-                        <input type="text" style="width: 200px;border-radius: 20px;padding: 10px;">
+                        <select name="" id="Stream">
+                            <option>Select stream</option>
+                            <option value="Violet">Violet</option>
+                            <option value="Blue">Blue</option>
+                        </select>
+                        <!-- <p></p>
+                        <input type="text" style="width: 200px;border-radius: 20px;padding: 10px;"> -->
                     </div>
                 </div>
             </div>
 
          
                 <div class="row">
-                    <p>Contact Person</p>
-                        <input type="text" style="width: 200px;border-radius: 20px;padding: 10px;">
+                    <p>Password</p>
+                        <input id="pass" type="password" style="width: 200px;border-radius: 20px;padding: 10px;">
                 </div>
                 <div class="row">
                     <p>Email</p>
-                    <input type="text" style="width: 200px;border-radius: 20px;padding: 10px;">
+                    <input id="stdEmail" type="text" style="width: 200px;border-radius: 20px;padding: 10px;">
 
                 </div>
                 <div class="row">
-                    <p>KCSE grade</p>
-                    <input type="text" style="width: 200px;border-radius: 20px;padding: 10px;">
+                    <select name="" id="Hostel">
+                        <option>Choose Hostel</option>
+                        <option value="Mercury">Mercury</option>
+                        <option value="Uranus">Uranus</option>
+                    </select>
+                    <!-- <p></p>
+                    <input type="text" style="width: 200px;border-radius: 20px;padding: 10px;"> -->
 
                 </div>
            
@@ -76,7 +86,7 @@
         </div>
         <div class="modal-footer">
           <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
-          <button type="button" class="btn btn-primary">Admit</button>
+          <button type="button" id="admitBtn" class="btn btn-primary">Admit</button>
         </div>
       </div>
     </div>
@@ -90,7 +100,7 @@
   
   <!-- Modal -->
   <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog  modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-scrollable  modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="staticBackdropLabel">Teacher Details</h5>
@@ -161,7 +171,16 @@
   
     </section>
     
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
 
+
+
+    
+<script src="/js/config.js"></script>
+<script src="/js/admitStudent.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 
 

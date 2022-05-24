@@ -16,7 +16,7 @@ document.getElementById("login").onclick =()=>{
         let user = userDetails.user;
         let uid = user.uid;
 
-        alert("Signing ")
+        alert("Signing In....")
 
     //Check user type
     firebase.firestore().collection("users").doc(uid)

@@ -5,6 +5,7 @@ window.oncontextmenu =()=>{
 }
 
 document.getElementById("login").onclick =()=>{
+    
     let email = document.getElementById("email").value;
 
     firebase.auth().sendPasswordResetEmail(email)
