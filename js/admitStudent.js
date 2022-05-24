@@ -8,9 +8,9 @@ firebase.auth().onAuthStateChanged((user)=>{
     if(user){
         firebase.firestore().collection("users").doc(user.uid).get()
         .then((doc)=>{
-            let userType = doc.data().userType;
+            // let usertype = doc.data().userType;
           
-            if(userType == "admin"){
+            // if(usertype == "admin"){
 
                 document.getElementById("admitBtn").onclick=()=>{
                     let studentName = document.getElementById("studentName").value;
@@ -19,7 +19,7 @@ firebase.auth().onAuthStateChanged((user)=>{
                     let hostel = document.getElementById("Hostel").value;
                     let stream = document.getElementById("Stream").value;
                     let password = document.getElementById("pass").value;
-                    // let timeStamp = firebase.firestore.Timestamp.fromDate(new Date());
+                    let timeStamp = firebase.firestore.Timestamp.fromDate(new Date());
 
                     // invoke firebase
                     firebase.auth().createUserWithEmailAndPassword(email,password)
@@ -31,34 +31,34 @@ firebase.auth().onAuthStateChanged((user)=>{
                         firebase.firestore().collection("users").doc(uid).set({
                             name: studentName,
                             userId: uid,
-                            userType: "student"
-                            // timestamp: timeStamp
+                            userType: "student",
+                            timestamp: timeStamp
                         }).then(()=>{
                             alert("user updated");
 
-                                        // Create Student Collection
+                           // Create Student Collection
 
-                        let stdDoc = firebase.firestore().collection("students").doc();
-                        stdDoc.set({
+                         let studentDoc = firebase.firestore().collection("students").doc();
+                          studentDoc.set({
                             name: studentName,
                             admNo: admNo,
-                            hostel:hostel,
-                            stream: stream,
-                            email: email,
-                            stdDocId: stdDoc.Id,
-                            stdUserId: uid
-                            // timestamp:timeStamp
-                        }).then(()=>{
-                            alert("Student Created");
-                        }).catch((error)=>{
-                            alert(error.message);
-                        })
+                           hostel:hostel,
+                           stream: stream,
+                          email: email,
+                           stdDocId: stdDoc.Id,
+                           stdUserId: uid,
+                          timestamp:timeStamp
+                      }).then(()=>{
+                        alert("Student Created");
+                     }).catch((error)=>{
+                        alert(error.message);
+                    })
+                           
 
                         }).catch((error)=>{
                             alert(error.message);
                         })
-
-            
+                       
 
                     }).catch((error)=>{
                         alert(error.message);
@@ -67,9 +67,10 @@ firebase.auth().onAuthStateChanged((user)=>{
                 }
 
 
-            }else{
-                window.location.href ="/html/index.html";
-            }
+            // }
+            // else{
+            //     window.location.href ="/html/index.html";
+            // }
             
         })
 
