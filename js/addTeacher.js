@@ -21,7 +21,47 @@ firebase.auth().onAuthStateChanged((user)=>{
                     let tPhone = document.getElementById("tPhone").value;
                     let email = document.getElementById("tEmail").value;
                     let password = document.getElementById("pass2").value;
+                    let timeStamp = firebase.firestore.Timestamp.fromDate(new Date());
 
+
+                    // Invoke firebase to create user
+
+                    firebase.auth().createUserWithEmailAndPassword(email,password)
+                    .then((userCredentials)=>{
+                        let user = userCredentials.user;
+                        let uid = user.uid;
+
+                        alert("user created successfully");
+
+                        firebase.firestore().collection("users").doc(uid).set({
+                            name:teacherName,
+                            userType: "teacher",
+                            userId: uid,
+                            timestamp: timeStamp
+
+                        }).then(()=>{
+                            alert("user Updated");
+
+                            let teacherDoc = firebase.firestore().collection("teachers").doc();
+                            teacherDoc.set({
+                                name: teacherName,
+                                staffNo: staffNo,
+                                phoneNum: tPhone,
+                                email : email,
+                                subjects: subjects,
+                                timestamp: timeStamp,
+                                teacherDocId: teacherDoc.id,
+                                teacherUserId: uid
+                            }).then(()=>{
+                                alert("teacher created");
+                                window.location.reload();
+                            }).catch((error)=>{
+                                alert(error.message);
+                            })
+                        }).catch((error)=>{
+                            alert(error.message);
+                        })
+                    })
 
 
                 }
