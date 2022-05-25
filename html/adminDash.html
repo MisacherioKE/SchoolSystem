@@ -111,15 +111,20 @@
                 <div class="col">
                     <div class="row">
                         <p>Name</p>
-                        <input type="text" style="width: 200px;border-radius: 20px;padding: 10px;">
+                        <input type="text" id="teacherName" style="width: 200px;border-radius: 20px;padding: 10px;">
                     </div>
                     <div class="row">
                         <p>Staff No</p>
-                        <input type="text" style="width: 200px;border-radius: 20px;padding: 10px;">
+                        <input type="text" id="staffNo" style="width: 200px;border-radius: 20px;padding: 10px;">
                     </div>
                     <div class="row">
-                        <p>Subjects</p>
-                        <input type="text" style="width: 200px;border-radius: 20px;padding: 10px;">
+                        <select name="" id="subjects">
+                            <option>Select Subjects</option>
+                            <option value="maths">Mathematics</option>
+                            <option value="physics">Physics</option>
+                        </select>
+                        <!-- <p>Subjects</p> -->
+                        <!-- <input type="text" style="width: 200px;border-radius: 20px;padding: 10px;"> -->
                     </div>
                 </div>
             </div>
@@ -127,16 +132,16 @@
          
                 <div class="row">
                     <p>Phone number</p>
-                        <input type="text" style="width: 200px;border-radius: 20px;padding: 10px;">
+                        <input type="text" id="tPhone" style="width: 200px;border-radius: 20px;padding: 10px;">
                 </div>
                 <div class="row">
                     <p>Email</p>
-                    <input type="text" style="width: 200px;border-radius: 20px;padding: 10px;">
+                    <input type="text" id="tEmail" style="width: 200px;border-radius: 20px;padding: 10px;">
 
                 </div>
                 <div class="row">
-                    <p>Place of residence</p>
-                    <input type="text" style="width: 200px;border-radius: 20px;padding: 10px;">
+                    <p>Password</p>
+                    <input type="text" id="pass" style="width: 200px;border-radius: 20px;padding: 10px;">
 
                 </div>
            
@@ -145,7 +150,7 @@
         </div>
         <div class="modal-footer">
           <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
-          <button type="button" class="btn btn-primary">Add</button>
+          <button id="addTeacher" type="button" class="btn btn-primary">Add</button>
         </div>
       </div>
     </div>
@@ -181,6 +186,7 @@
     
 <script src="/js/config.js"></script>
 <script src="/js/admitStudent.js"></script>
+<script src="/js/addTeacher.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 
 

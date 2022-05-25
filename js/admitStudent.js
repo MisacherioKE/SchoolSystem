@@ -8,9 +8,9 @@ firebase.auth().onAuthStateChanged((user)=>{
     if(user){
         firebase.firestore().collection("users").doc(user.uid).get()
         .then((doc)=>{
-            // let usertype = doc.data().userType;
+            let usertype = doc.data().userType;
           
-            // if(usertype == "admin"){
+            if(usertype == "admin"){
 
                 document.getElementById("admitBtn").onclick=()=>{
                     let studentName = document.getElementById("studentName").value;
@@ -67,10 +67,10 @@ firebase.auth().onAuthStateChanged((user)=>{
                 }
 
 
-            // }
-            // else{
-            //     window.location.href ="/html/index.html";
-            // }
+            }
+            else{
+                window.location.href ="/html/index.html";
+            }
             
         })
 
