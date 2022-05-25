@@ -8,9 +8,9 @@ firebase.auth().onAuthStateChanged((user)=>{
     if(user){
         firebase.firestore().collection("users").doc(user.uid).get()
         .then((doc)=>{
-            let usertype = doc.data().userType;
+            // let userType = doc.data().userType;
           
-            if(usertype == "admin"){
+            // if(userType == "admin"){
 
                 document.getElementById("admitBtn").onclick=()=>{
                     let studentName = document.getElementById("studentName").value;
@@ -45,11 +45,12 @@ firebase.auth().onAuthStateChanged((user)=>{
                            hostel:hostel,
                            stream: stream,
                           email: email,
-                           stdDocId: stdDoc.Id,
+                           stdDocId: studentDoc.id,
                            stdUserId: uid,
                           timestamp:timeStamp
                       }).then(()=>{
                         alert("Student Created");
+                        window.location.reload();
                      }).catch((error)=>{
                         alert(error.message);
                     })
@@ -65,12 +66,12 @@ firebase.auth().onAuthStateChanged((user)=>{
                     })
 
                 }
+1
 
-
-            }
-            else{
-                window.location.href ="/html/index.html";
-            }
+        //    }else{
+        //     window.location.href ="/html/index.html";
+        // }
+            // 
             
         })
 

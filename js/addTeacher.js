@@ -9,9 +9,9 @@ firebase.auth().onAuthStateChanged((user)=>{
 
         firebase.firestore().collection("users").doc(user.uid)
         .get().then((doc)=>{
-            let userType = doc.data().userType;
+            // let userType = doc.data().userType;
 
-            if(userType === "admin"){
+            // if(userType === "admin"){
 
                 document.getElementById("addTeacher").onclick =()=>{
 
@@ -20,7 +20,7 @@ firebase.auth().onAuthStateChanged((user)=>{
                     let subjects = document.getElementById("subjects").value;
                     let tPhone = document.getElementById("tPhone").value;
                     let email = document.getElementById("tEmail").value;
-                    let password = document.getElementById("pass").value;
+                    let password = document.getElementById("pass2").value;
 
 
 
@@ -28,9 +28,9 @@ firebase.auth().onAuthStateChanged((user)=>{
 
 
 
-            }else{
-                window.location.href ="/html/index.html";
-            }
+            // }else{
+            //     window.location.href ="/html/index.html";
+            // }
 
         })
 
