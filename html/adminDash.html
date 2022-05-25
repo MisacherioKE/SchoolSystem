@@ -93,69 +93,66 @@
   </div>
             <!-- <a class="listItem" href=""><h2>ADMIT TEACHER</h2></a> -->
 
-             <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-    ADMIT TEACHER
-  </button>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-scrollable  modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Teacher Details</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <div class="container">
-                <div class="col">
-                    <div class="row">
-                        <p>Name</p>
-                        <input type="text" id="teacherName" style="width: 200px;border-radius: 20px;padding: 10px;">
-                    </div>
-                    <div class="row">
-                        <p>Staff No</p>
-                        <input type="text" id="staffNo" style="width: 200px;border-radius: 20px;padding: 10px;">
-                    </div>
-                    <div class="row">
-                        <select name="" id="subjects">
-                            <option>Select Subjects</option>
-                            <option value="maths">Mathematics</option>
-                            <option value="physics">Physics</option>
-                        </select>
-                        <!-- <p>Subjects</p> -->
-                        <!-- <input type="text" style="width: 200px;border-radius: 20px;padding: 10px;"> -->
-                    </div>
-                </div>
-            </div>
-
-         
-                <div class="row">
-                    <p>Phone number</p>
-                        <input type="text" id="tPhone" style="width: 200px;border-radius: 20px;padding: 10px;">
-                </div>
-                <div class="row">
-                    <p>Email</p>
-                    <input type="text" id="tEmail" style="width: 200px;border-radius: 20px;padding: 10px;">
-
-                </div>
-                <div class="row">
-                    <p>Password</p>
-                    <input type="text" id="pass2" style="width: 200px;border-radius: 20px;padding: 10px;">
-
-                </div>
-           
+            
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            ADMIT TEACHER
+          </button>
           
-        
-        </div>
-        <div class="modal-footer">
-          <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
-          <button id="addTeacher" type="button" class="btn btn-primary">Add</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                 <div class="container">
+                     <div class="col">
+                         <div class="row">
+                             <p>Name</p>
+                             <input type="text" id="teacherName">
+                         </div>
+                         <div class="row">
+                             <p>Staff No</p>
+                             <input type="text" id="staffNo">  
+                         </div>
+                         <div class="row">
+                             <p>Subjects</p>
+                             <select name="" id="subjects">
+                                 <option>Choose Subjects</option>
+                                 <option value="maths">Mathematics</option>
+                                 <option value="physics">Physics</option>
+                             </select>
+                         </div>
+                         <div class="row">
+                             <p>Phone Num</p>
+                             <input type="text" id="tPhone">
+                         </div>
+                         <div class="row">
+                             <p>Email</p>
+                             <input type="text" id="tEmail">
+                         </div>
+                         <div class="row">
+                             <p>Password</p>
+                             <input type="password" id="pass2">
+                         </div>
+                     </div>
+                 </div>
+                </div>
+                <div class="modal-footer">
+                  <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                  <button id="addTeacher" type="button" class="btn btn-primary">Add</button>
+                </div>
+              </div>
+            </div>
+          </div>
+                   
+                  
+                
+                </div>
+ 
            <button class="btn btn-primary "> ALL STUDENTS</button>
            <button class="btn btn-primary"> ALL TEACHERS</button>
             
