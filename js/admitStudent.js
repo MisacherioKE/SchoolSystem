@@ -4,6 +4,10 @@ window.oncontextmenu =()=>{
     return false;
 }
 
+document.getElementById("allStds").onclick =()=>{
+    window.location.href="/html/allStudents.html";
+}
+
 firebase.auth().onAuthStateChanged((user)=>{
     if(user){
         firebase.firestore().collection("users").doc(user.uid).get()
