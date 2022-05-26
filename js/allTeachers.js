@@ -20,7 +20,7 @@ firebase.auth().onAuthStateChanged((user)=>{
                 let content ="";
                 content +=`<tr>`         
                content +=`<th scope="row">1</th>`
-                content +=`<td colspan="2">${name}</td>`
+                content +=`<td colspan="1">${name}</td>`
                 content +=`<td>${staffNo}</td>`
                 content +=`<td>${subjects}</td>`
                 content +=`<td><button onClick="viewMore(\`${teacherDocId}\`)" data-bs-toggle="modal" data-bs-target="#teacherDetails" class="btn btn-outline-success">more</button></td>`
@@ -39,10 +39,15 @@ firebase.auth().onAuthStateChanged((user)=>{
                 let name = doc.data().name;
                 let email = doc.data().email;
                 let phoneNumber = doc.data().phoneNum;
+                let residence = doc.data().residence;
 
                 document.getElementById("name").innerHTML = name;
                 document.getElementById("phoneNumber").innerHTML = phoneNumber;
                 document.getElementById("email").innerHTML = email;
+                document.getElementById("residence").innerHTML = residence;
+
+
+
             }).catch((error)=>{
                 alert(error.message);
             })
@@ -62,6 +67,7 @@ firebase.auth().onAuthStateChanged((user)=>{
                     let staffNo = doc.data().staffNo;
                     let subjects = doc.data().subjects;
                     let email = doc.data().email;
+                    let residence = doc.data().residence;
                     let phoneNumber = doc.data().phoneNum;
 
                     document.getElementById("teacherName").value = name;
@@ -69,6 +75,7 @@ firebase.auth().onAuthStateChanged((user)=>{
                     document.getElementById("subjects").value = subjects;
                     document.getElementById("tPhone").value = phoneNumber;
                     document.getElementById("tEmail").value = email;
+                    document.getElementById("residence").value = residence;
                 
                 
             })
@@ -81,6 +88,7 @@ firebase.auth().onAuthStateChanged((user)=>{
                 let subjects = document.getElementById("subjects").value;
                let phoneNum = document.getElementById("tPhone").value;
                 let email = document.getElementById("tEmail").value;
+                let residence = document.getElementById("residence").value;
                 let timestamp = firebase.firestore.Timestamp.fromDate(new Date());
 
                 firebase.firestore().collection("teachers").doc(teacherDocId)
@@ -90,6 +98,7 @@ firebase.auth().onAuthStateChanged((user)=>{
                     subjects: subjects,
                     phoneNumber:phoneNum,
                     email: email,
+                    residence:residence,
                     timestamp: timestamp
 
                 }).then(()=>{

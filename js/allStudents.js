@@ -20,12 +20,12 @@ firebase.auth().onAuthStateChanged((user)=>{
                 let content ="";
                content +=`<tr>` 
                content +=`<th scope="row">1</th>` 
-                content +=`<td>${name}</td>`
+                content +=`<td colspan="1">${name}</td>`
                 content +=`<td>${admNo}</td>`
                 content +=`<td>${stream}</td>`
                 content +=`<td><button onClick="viewMore(\`${studentDocId}\`)" data-bs-toggle="modal" data-bs-target="#stdDetails" class="btn btn-outline-success">more</button></td>`
                 content +=`<td><button  onClick="editStd(\`${carriedId}\`)"  data-bs-toggle="modal" data-bs-target="#editInfo"  class="btn btn-outline-success">edit</button></td>`
-                content +=`<td><i class="fa-solid fa-trash-can"></i></td>`
+                content +=`<td><i class="fa-solid fa-trash-can h4" style="color: red;"></i></td>`
               content +=`</tr>`
 
 

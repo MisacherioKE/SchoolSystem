@@ -25,6 +25,7 @@ firebase.auth().onAuthStateChanged((user)=>{
                     let tPhone = document.getElementById("tPhone").value;
                     let email = document.getElementById("tEmail").value;
                     let password = document.getElementById("pass2").value;
+                    let residence = document.getElementById("residence").value;
                     let timeStamp = firebase.firestore.Timestamp.fromDate(new Date());
 
 
@@ -55,6 +56,7 @@ firebase.auth().onAuthStateChanged((user)=>{
                                 subjects: subjects,
                                 timestamp: timeStamp,
                                 teacherDocId: teacherDoc.id,
+                                residence:residence,
                                 teacherUserId: uid
                             }).then(()=>{
                                 alert("teacher created");
