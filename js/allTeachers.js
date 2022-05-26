@@ -20,6 +20,9 @@ firebase.auth().onAuthStateChanged((user)=>{
                 content +=`<td colspan="2">${name}</td>`
                 content +=`<td>${staffNo}</td>`
                 content +=`<td>${subjects}</td>`
+                content +=`<td><button>more</button></td>`
+                content +=`<td><button>edit</button></td>`
+                content +=`<td><i class="fa-solid fa-trash-can"></i></td>`
               content +=`</tr>`
 
               $("#teacherData").append(content);

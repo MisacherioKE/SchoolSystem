@@ -43,6 +43,93 @@
             </tbody>
           </table>
 
+          <!-- Modal -->
+          <div class="modal" tabindex="-1" id="stdDetails">
+            <div class="modal-dialog modal-dialog-scrollable  modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Student Info</h5>
+                  <button class="btn-close" data-bs-dismiss="modal"></button>
+                  <div class="modal-body">
+                    <div class="container">
+                      <div class="col">
+                        <div class="row">
+                          <p id="email"></p>
+                          <p id="hostel"></p>
+                          <p id="name"></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- edit Modal -->
+          <div class="modal" id="editInfo" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Edit</h5>
+                <button class="btn-close"  data-bs-dismiss="modal"></button>
+                <div class="modal-body">
+                  <div class="container">
+                    <div class="col">
+                        <div class="row">
+                            <p >Name</p>
+                            <input id="studentName" type="text" style="width: 200px;border-radius: 20px;padding: 10px;">
+                        </div>
+                        <div class="row">
+                            <p>Adm No</p>
+                            <input id="admNo" type="text" style="width: 200px;border-radius: 20px;padding: 10px;">
+                        </div>
+                        <div class="row">
+                            <select name="" id="Stream">
+                                <option>Select stream</option>
+                                <option value="Violet">Violet</option>
+                                <option value="Blue">Blue</option>
+                            </select>
+                            <!-- <p></p>
+                            <input type="text" style="width: 200px;border-radius: 20px;padding: 10px;"> -->
+                        </div>
+                    </div>
+                </div>
+    
+             
+                    <div class="row">
+                        <p>Password</p>
+                            <input id="pass" type="password" style="width: 200px;border-radius: 20px;padding: 10px;">
+                    </div>
+                    <div class="row">
+                        <p>Email</p>
+                        <input id="stdEmail" type="text" style="width: 200px;border-radius: 20px;padding: 10px;">
+    
+                    </div>
+                    <div class="row">
+                        <select name="" id="Hostel">
+                            <option>Choose Hostel</option>
+                            <option value="Mercury">Mercury</option>
+                            <option value="Uranus">Uranus</option>
+                        </select>
+                        <!-- <p></p>
+                        <input type="text" style="width: 200px;border-radius: 20px;padding: 10px;"> -->
+    
+                    </div>
+               
+              
+            
+            </div>
+           
+                </div>
+                <div class="modal-footer">
+                  <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                  <button type="button" id="updateBtn" class="btn btn-primary">Update</button>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
 
 
