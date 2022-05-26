@@ -25,6 +25,8 @@ firebase.auth().onAuthStateChanged((user)=>{
 
               $("#data").append(content);
 
+            }).catch((error)=>{
+                alert(error.message);
             })
         })
 
