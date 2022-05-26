@@ -42,6 +42,7 @@ firebase.auth().onAuthStateChanged((user)=>{
                 let stdName = doc.data().name;
                 let hostel = doc.data().hostel;
                 let email = doc.data().email;
+                
 
                 document.getElementById("name").innerHTML = stdName;
                 document.getElementById("hostel").innerHTML = hostel;
@@ -98,6 +99,8 @@ firebase.auth().onAuthStateChanged((user)=>{
                 let stream = document.getElementById("Stream").value;
                let email = document.getElementById("stdEmail").value; 
                let hostel = document.getElementById("Hostel").value; 
+               let timestamp = firebase.firestore.Timestamp.fromDate(new Date());
+
 
 
                firebase.firestore().collection("students").doc(stdDocId)
@@ -106,7 +109,8 @@ firebase.auth().onAuthStateChanged((user)=>{
                    admNo: admNo,
                    stream: stream,
                    email: email,
-                   hostel: hostel
+                   hostel: hostel,
+                   timestamp:timestamp
                }).then(()=>{
                    alert("student updated");
 

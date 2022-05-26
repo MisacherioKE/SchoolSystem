@@ -14,7 +14,6 @@ firebase.auth().onAuthStateChanged((user)=>{
                 let subjects = doc.data().subjects;
                 let teacherDocId = doc.data().teacherDocId;
                 let teacherUserId = doc.data().teacherUserId;
-
                 let carriedId = teacherDocId +"?"+ teacherUserId;
 
 
@@ -50,7 +49,7 @@ firebase.auth().onAuthStateChanged((user)=>{
         }
         // Edit Teacher
 
-        window.editTeacher =(value)=>{
+        window.editTeacher = (value)=>{
             // alert(value);
             let result = value.split("?");
             let teacherDocId = result[0];
@@ -82,6 +81,7 @@ firebase.auth().onAuthStateChanged((user)=>{
                 let subjects = document.getElementById("subjects").value;
                let phoneNum = document.getElementById("tPhone").value;
                 let email = document.getElementById("tEmail").value;
+                let timestamp = firebase.firestore.Timestamp.fromDate(new Date());
 
                 firebase.firestore().collection("teachers").doc(teacherDocId)
                 .update({
@@ -89,7 +89,8 @@ firebase.auth().onAuthStateChanged((user)=>{
                     staffNo:staffNo,
                     subjects: subjects,
                     phoneNumber:phoneNum,
-                    email: email
+                    email: email,
+                    timestamp: timestamp
 
                 }).then(()=>{
                     alert("teacher updated");
