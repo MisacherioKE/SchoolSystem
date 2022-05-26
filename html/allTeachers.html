@@ -42,8 +42,91 @@
            
             </tbody>
           </table>
+          <!-- View More modal -->
+          <!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#teacherDetails">
+  Launch demo modal
+</button> -->
 
+<!-- Modal -->
+<div class="modal fade" id="teacherDetails" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Teacher Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <div class="col">
+            <div class="row">
+              <p id="email"></p>
+              <p id="phoneNumber"></p>
+              <p id="name"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>
 
+     <!--editModal -->
+<div class="modal fade" id="editTeacherDetails" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Edit Teacher Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <div class="col">
+              <div class="row">
+                  <p>Name</p>
+                  <input type="text" id="teacherName">
+              </div>
+              <div class="row">
+                  <p>Staff No</p>
+                  <input type="text" id="staffNo">  
+              </div>
+              <div class="row">
+                  <p>Subjects</p>
+                  <select name="" id="subjects">
+                      <option>Choose Subjects</option>
+                      <option value="maths">Mathematics</option>
+                      <option value="physics">Physics</option>
+                  </select>
+              </div>
+              <div class="row">
+                  <p>Phone Num</p>
+                  <input type="text" id="tPhone">
+              </div>
+              <div class="row">
+                  <p>Email</p>
+                  <input type="text" id="tEmail">
+              </div>
+              <div class="row">
+                  <p>Password</p>
+                  <input type="password" id="pass2">
+              </div>
+          </div>
+      </div>
+     </div>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button id="updateButton" type="button" class="btn btn-primary">Update</button>
+      </div>
+    </div>
+  </div>
+</div>
+    
 
 
     </section>
