@@ -76,18 +76,7 @@ right: 0;
     font-size: 15px;
     font-weight: bold;
 }
-.navBar1{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    /* background-color: rgb(88, 88, 246) ;
-    height: 50px;  */
-    width: 80%;
-    border-radius: 20px;
-    position: absolute;
-    left: 10%;
-    top: 15%;
-}
+
 .divA{
     width: 50%;
     height: 70vh;
