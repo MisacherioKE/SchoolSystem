@@ -3,6 +3,10 @@ window.oncontextmenu =()=>{
     return false;
 }
 
+document.getElementById("allTchr").onclick =()=>{
+    window.location.href ="/html/allTeachers.html";
+}
+
 firebase.auth().onAuthStateChanged((user)=>{
     if(user){
 
