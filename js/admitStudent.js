@@ -11,6 +11,9 @@ document.getElementById("proPic").onclick =()=>{
     document.getElementById("proDetails").style.display ="block";
     
 }
+document.getElementById("proDetails").onmouseleave =()=>{
+    document.getElementById("proDetails").style.display ="none";
+}
 document.getElementById("logOut").onclick =()=>{
     window.location.href ="/html/index.html";
 }
