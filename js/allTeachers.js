@@ -25,7 +25,7 @@ firebase.auth().onAuthStateChanged((user)=>{
                 content +=`<td>${subjects}</td>`
                 content +=`<td><button onClick="viewMore(\`${teacherDocId}\`)" data-bs-toggle="modal" data-bs-target="#teacherDetails" class="btn btn-outline-success">more</button></td>`
                 content +=`<td><button onClick="editTeacher(\`${carriedId}\`)" data-bs-toggle="modal" data-bs-target="#editTeacherDetails" class="btn btn-outline-success">edit</button></td>`
-                content +=`<td><i onClick ="delete(\`${carriedId}\`)" class="fa-solid fa-trash-can"></i></td>`
+                content +=`<td><i onClick ="delete(\`${carriedId}\`)" class="fa-solid fa-trash-can" style="color: red;"></i></td>`
               content +=`</tr>`
 
               $("#teacherData").append(content);

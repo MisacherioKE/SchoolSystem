@@ -76,6 +76,18 @@ right: 0;
     font-size: 15px;
     font-weight: bold;
 }
+#proDetails{
+    width: 150px;
+    height: 80px;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+}
 
 .divA{
     width: 50%;

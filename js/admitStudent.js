@@ -7,6 +7,13 @@ window.oncontextmenu =()=>{
 document.getElementById("allStds").onclick =()=>{
     window.location.href="/html/allStudents.html";
 }
+document.getElementById("proPic").onclick =()=>{
+    document.getElementById("proDetails").style.display ="block";
+    
+}
+document.getElementById("logOut").onclick =()=>{
+    window.location.href ="/html/index.html";
+}
 
 firebase.auth().onAuthStateChanged((user)=>{
     if(user){
