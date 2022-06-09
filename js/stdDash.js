@@ -12,3 +12,12 @@ function submit (){
         note
     })
 }
+firebase.database().ref("notes").get()
+.then((querySnapshot)=>{
+    var data = querySnapshot
+
+    console.log(data);
+  
+}).catch((error)=>{
+    alert(error.message);
+})
