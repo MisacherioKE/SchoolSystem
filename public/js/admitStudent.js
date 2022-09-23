@@ -11,7 +11,7 @@ firebase.auth().onAuthStateChanged((user)=>{
 
 
         document.getElementById("allStds").onclick =()=>{
-            window.location.href="/html/allStudents.html";
+            window.location.href="/public/html/allStudents.html";
         }
         document.getElementById("proPic").onclick =()=>{
             document.getElementById("proDetails").style.display ="block";

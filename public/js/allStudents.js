@@ -135,6 +135,6 @@ firebase.auth().onAuthStateChanged((user)=>{
         }
 
     }else{
-        window.location.href ="/html/index.html";
+        window.location.href ="/public/html/index.html";
     }
 })
