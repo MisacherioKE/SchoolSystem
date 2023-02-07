@@ -24,9 +24,9 @@ document.getElementById("login").onclick =()=>{
         let userType = doc.data().userType;
 
         if(userType =="admin"){
-         window.location.href ="/public/html/adminDash.html";
+         window.location.href ="../html/adminDash.html";
         }else if(userType == "student"){
-            window.location.href ="/public/html/stdDash.html";
+            window.location.href ="../html/stdDash.html";
         }
     })
 

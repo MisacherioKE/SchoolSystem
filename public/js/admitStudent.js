@@ -11,7 +11,7 @@ firebase.auth().onAuthStateChanged((user)=>{
 
 
         document.getElementById("allStds").onclick =()=>{
-            window.location.href="/public/html/allStudents.html";
+            window.location.href="./html/allStudents.html";
         }
         document.getElementById("proPic").onclick =()=>{
             document.getElementById("proDetails").style.display ="block";
@@ -21,7 +21,7 @@ firebase.auth().onAuthStateChanged((user)=>{
             document.getElementById("proDetails").style.display ="none";
         }
         document.getElementById("logOut").onclick =()=>{
-            window.location.href ="/html/index.html";
+            window.location.href ="../index.html";
         }
 
 
@@ -97,7 +97,7 @@ firebase.auth().onAuthStateChanged((user)=>{
 
     }
     else{
-        window.location.href ="/html/index.html";
+        window.location.href ="../index.html";
     }
 })
 
